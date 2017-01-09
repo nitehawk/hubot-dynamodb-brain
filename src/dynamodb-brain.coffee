@@ -45,6 +45,7 @@ module.exports = (robot) ->
     brain.Item.botname = params.Key.botname
     doc.put brain, (err, res) ->
       console.log res
+      console.log err
       if err
         throw err
 
