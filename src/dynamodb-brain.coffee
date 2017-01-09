@@ -43,6 +43,7 @@ module.exports = (robot) ->
   saveBrain = (data = {}) ->
     brain = {TableName: params.TableName, Item: data}
     brain.Item.botname = params.Key.botname
+    console.log brain
     doc.put brain, (err, res) ->
       if err
         throw err
